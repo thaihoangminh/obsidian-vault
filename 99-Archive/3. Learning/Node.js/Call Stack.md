@@ -1,0 +1,1 @@
+The call stack is a data structure that keeps track of function execution. Functions are added to the stack when invoked and removed once they are complete.

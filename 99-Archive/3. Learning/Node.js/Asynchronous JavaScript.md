@@ -1,0 +1,1 @@
+Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be responsive to other events while that task runs, rather than having to wait until it has finished.

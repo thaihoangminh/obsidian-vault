@@ -1,0 +1,1 @@
+Most Node.js libraries (especially in its core modules) use async or event-driven approaches, enabling the server to handle multiple requests concurrently.

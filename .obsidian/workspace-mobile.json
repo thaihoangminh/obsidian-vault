@@ -1,0 +1,254 @@
+{
+  "main": {
+    "id": "7eed4cd324316ff8",
+    "type": "split",
+    "children": [
+      {
+        "id": "3998b9d78c83f7ea",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b7ccc0a0fbb6a78c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3. Learning/AI/Document-Driven Development with AI.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Document-Driven Development with AI"
+            }
+          },
+          {
+            "id": "716198bae502fae9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03-Knowledge/How Browsers Work/Browser Security.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Browser Security"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f9deb2c3babbf563",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "e8fcfb39e166754c",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "443b98893c06c6ca",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "07aa48d3826983c3",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "47b9a7ae4f8e27e9",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "6c928fb173398a50",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "0466976c821041e1",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "How to use AI to increase Software productivity.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "11b3d82080dd1f97",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "03-Knowledge/How Browsers Work/Browser Security.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "9cac5425cb3c6b99",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Welcome.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      },
+      {
+        "id": "cd3c59ecd346eb1f",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {},
+          "icon": "lucide-ghost",
+          "title": "calendar"
+        }
+      }
+    ],
+    "currentTab": 1
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-importer:Open Importer": false,
+      "obsidian-kanban:Create new board": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "716198bae502fae9",
+  "lastOpenFiles": [
+    "03-Knowledge/How Browsers Work/How Browsers Work MOC.md",
+    "03-Knowledge/How Browsers Work/Browser Storage.md",
+    "03-Knowledge/How Browsers Work/Kiến trúc Browser.md",
+    "99-Archive",
+    "07-Playbooks",
+    "06-Prompts",
+    "05-Decisions",
+    "04-Knowledge",
+    "03-Areas",
+    "02-Projects",
+    "01-Daily",
+    "00-Inbox",
+    "3. Learning/AI/Insert text for translation.md",
+    "3. Learning/AI/Learning supported by AI prompts.md",
+    "3. Learning/AI/ChatGPT Prompt Engineering for Developers.md",
+    "AI system prompt.md",
+    "Đầu Tư.md",
+    "English.md",
+    "Sharing n8n/n8n_sharing_english_FAQ_and_intro.md",
+    "JIRA ticket processing and Code implementation.md",
+    "2025-05-04.md",
+    "PARA method.md",
+    "Sam Altman on productivity.md",
+    "1. Project/Shorts/Docker.md",
+    "3. Learning/AI/Fix bug.md",
+    "3. Learning/AI/Document-Driven Development with AI.md",
+    "Document-drivent development  prompt.md",
+    "3. Learning/AI/Project Requirement Document template.md",
+    "3. Learning/AI/Develop a new feature with AI.md",
+    "3. Learning/AI/Vibe Coding.md",
+    "3. Learning/AI/Git commit messages.md",
+    "3. Learning/AI/Log timesheet 2.md",
+    "1. Project/Image Processing/0.1 Project Requirements Document (PRD).md",
+    "3. Learning/AI/Code Preview Template.md",
+    "Vibe-coding doc.md",
+    "1. Project/Image Processing",
+    "Node.js Mindmap.canvas",
+    "Attachments/IMG_3995.gif",
+    "Attachments/City Buildings Water Photo.jpg",
+    "Attachments/Screenshot 2024-05-06 at 20.34.24.png",
+    "Attachments/Screenshot 2024-05-06 at 20.39.14.png",
+    "Attachments/SCR-20250319-hzey.png",
+    "Attachments/Screenshot 2024-05-06 at 20.37.48 1.png",
+    "Attachments/Async Defer.svg",
+    "Attachments/SCR-20250319-hptu.png",
+    "Async Defer.svg"
+  ]
+}

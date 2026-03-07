@@ -1,0 +1,3 @@
+React uses its own virtual DOM (Document Object Model) to keep track of which HTML elements need to be updated. This virtual DOM is a representation of the browser DOM that is kept in memory. React compares the virtual DOM to the previous version and determines which elements have changed. Only the changed elements are updated in the browser DOM, resulting in a faster and more responsive application. This process is called reconciliation. By using the virtual DOM, React avoids the need to recreate the entire page when updating components.
+
+#react

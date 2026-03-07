@@ -1,0 +1,258 @@
+{
+  "main": {
+    "id": "9f9eda53272a9e07",
+    "type": "split",
+    "children": [
+      {
+        "id": "efa77c3396ff861a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a18722cc64a0cd2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03-Knowledge/How Browsers Work/Kiến trúc Browser.md",
+                "mode": "preview",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Kiến trúc Browser"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c9991adf9f772b0f",
+    "type": "split",
+    "children": [
+      {
+        "id": "da352dee8a5ab20c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b0ef654206fa9a3a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "cb0def164dfa671f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "9813af854d75c221",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": true
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 322.5
+  },
+  "right": {
+    "id": "b6b4c3c267d39e09",
+    "type": "split",
+    "children": [
+      {
+        "id": "72a5e2d6b2ff85cf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a7fa3127c57f0236",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "n8n Timesheet workflow template.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for n8n Timesheet workflow template"
+            }
+          },
+          {
+            "id": "f13e270e8409d6b3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "n8n Timesheet workflow template.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from n8n Timesheet workflow template"
+            }
+          },
+          {
+            "id": "5f3786626d21626c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "532aefadab14f13a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "03-Knowledge/How Browsers Work/Kiến trúc Browser.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Kiến trúc Browser"
+            }
+          },
+          {
+            "id": "24510ad3364d3610",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "calendar"
+            }
+          },
+          {
+            "id": "c9e39cdd76616317",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 450.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:Create new base": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "switcher:Open quick switcher": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-importer:Open Importer": false,
+      "obsidian-kanban:Create new board": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "a18722cc64a0cd2c",
+  "lastOpenFiles": [
+    "03-Knowledge/How Browsers Work/Browser Storage.md",
+    "03-Knowledge/How Browsers Work/Browser Security.md",
+    "03-Knowledge/How Browsers Work/How Browsers Work MOC.md",
+    "03-Knowledge/How Browsers Work/Phương Pháp Học Browser Internals.md",
+    "03-Knowledge/How Browsers Work/JavaScript Engine.md",
+    "2026-03-06.md",
+    "02-Projects/how-browsers-work-interactive/app.js",
+    "02-Projects/how-browsers-work-interactive/styles.css",
+    "99-Archive/3. Learning/Javascript/Async vs Defer.md",
+    "03-Knowledge/How Browsers Work/Kiến trúc Browser.md",
+    "02-Projects/how-browsers-work-interactive/index.html",
+    "02-Projects/how-browsers-work-interactive",
+    "03-Knowledge/How Browsers Work/Web Performance Optimization.md",
+    "3. Learning/AI/Code Preview Template.md",
+    "03-Knowledge/How Browsers Work/Networking Layer.md",
+    "03-Knowledge/How Browsers Work/Rendering Pipeline.md",
+    "03-Knowledge/How Browsers Work/Navigation Flow.md",
+    "03-Knowledge/How Browsers Work",
+    "03-Knowledge",
+    "99-Archive/Sharing n8n/n8n_sharing_english_FAQ_and_intro.md",
+    "99-Archive/Sharing n8n/n8n Workflow Template.md",
+    "99-Archive/Sharing n8n/Slide and Demo script.md",
+    "99-Archive/Sharing n8n/Final.md",
+    "99-Archive/Sharing n8n",
+    "99-Archive/Docs/code-editor-rules.md",
+    "99-Archive/Docs/Pull Request Template.md",
+    "99-Archive/Docs/Project Requirements Document Template.md",
+    "99-Archive/Docs/Prefer `as const` over `enum`.md",
+    "99-Archive/Docs/Document-Driven Development Workflow Guide.md",
+    "99-Archive/Docs/Document Drivent Development.md",
+    "99-Archive/Docs/Branch Naming Conventions.md",
+    "99-Archive/Docs/Coding Standards & Guidelines.md",
+    "99-Archive/Docs",
+    "99-Archive/3. Learning/AI/Learning supported by AI prompts.md",
+    "99-Archive/3. Learning/Node.js/Node.js Mindmap.canvas",
+    "99-Archive/3. Learning/ReactJs",
+    "99-Archive/3. Learning/Node.js",
+    "Attachments/IMG_3995.gif",
+    "Attachments/Pasted image 20250508111600.png",
+    "3. Learning/Node.js/Node.js Mindmap.canvas",
+    "Attachments/Screenshot 2024-05-06 at 20.39.14.png",
+    "Attachments/Screenshot 2024-05-06 at 20.37.48 1.png",
+    "Attachments/Screenshot 2024-05-06 at 20.34.24.png",
+    "Attachments/SCR-20250319-hzey.png",
+    "Attachments/Async Defer.svg",
+    "Attachments/City Buildings Water Photo.jpg",
+    "Attachments/SCR-20250319-hptu.png",
+    "Drawing.png"
+  ]
+}

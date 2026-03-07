@@ -1,0 +1,1 @@
+[**7 steps to building scalable Backend from scratch**](https://search.app/?link=https%3A%2F%2Fdev%2Eto%2Fanmolbaranwal%2F7%2Dsteps%2Dto%2Dbuilding%2Dscalable%2Dbackend%2Dfrom%2Dscratch%2Dfp8&utm_campaign=57165%2Dor%2Digacx%2Dweb%2Dshrbtn%2Diga%2Dsharing&utm_source=igadl%2Cigatpdl%2Csh%2Fx%2Fgs%2Fm2%2F5)

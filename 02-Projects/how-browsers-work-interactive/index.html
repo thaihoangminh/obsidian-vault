@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive visualization of how web browsers work - Navigation Flow, Rendering Pipeline, Event Loop Simulator, Performance Demo">
+    <title>How Browsers Work — Interactive Deep Dive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ===== NAV ===== -->
+    <nav id="main-nav">
+        <div class="nav-brand">🌐 How Browsers Work</div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#navigation-flow">Navigation</a>
+            <a href="#rendering-pipeline">Rendering</a>
+            <a href="#event-loop">Event Loop</a>
+            <a href="#performance-demo">Performance</a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🚀 Interactive Deep Dive</div>
+            <h1>How Browsers <span class="gradient-text">Work</span></h1>
+            <p class="hero-subtitle">Khám phá cơ chế bên trong trình duyệt web hiện đại — từ URL đến Pixels trên màn hình.</p>
+            <div class="hero-cards">
+                <a href="#navigation-flow" class="hero-card" data-icon="🧭">
+                    <h3>Navigation Flow</h3>
+                    <p>URL → DNS → TCP → HTTP → Render</p>
+                </a>
+                <a href="#rendering-pipeline" class="hero-card" data-icon="🎨">
+                    <h3>Rendering Pipeline</h3>
+                    <p>DOM → CSSOM → Layout → Paint</p>
+                </a>
+                <a href="#event-loop" class="hero-card" data-icon="⚡">
+                    <h3>Event Loop</h3>
+                    <p>Call Stack → Queues → Execution</p>
+                </a>
+                <a href="#performance-demo" class="hero-card" data-icon="🚀">
+                    <h3>Performance</h3>
+                    <p>transform vs left — FPS Demo</p>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll để khám phá</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- ===== NAVIGATION FLOW ===== -->
+    <section id="navigation-flow">
+        <div class="section-header">
+            <div class="section-badge">Section 01</div>
+            <h2>🧭 Navigation Flow</h2>
+            <p>Chuyện gì xảy ra khi bạn nhập URL và nhấn Enter?</p>
+        </div>
+        <div class="nav-flow-container">
+            <div class="nav-flow-controls">
+                <button id="nav-flow-start" class="btn btn-primary">▶ Start Journey</button>
+                <button id="nav-flow-reset" class="btn btn-ghost">↺ Reset</button>
+                <div class="nav-flow-progress">
+                    <div class="nav-flow-progress-bar" id="nav-flow-progress-bar"></div>
+                </div>
+            </div>
+            <div class="nav-flow-timeline" id="nav-flow-timeline">
+                <div class="timeline-step" data-step="0">
+                    <div class="step-icon">⌨️</div>
+                    <div class="step-label">URL Input</div>
+                    <div class="step-detail">
+                        <h4>URL Parsing & HSTS Check</h4>
+                        <p>Browser kiểm tra input: URL hay search query? Thêm <code>https://</code> nếu thiếu. Kiểm tra HSTS list để tự động chuyển HTTP → HTTPS.</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step" data-step="1">
+                    <div class="step-icon">🔍</div>
+                    <div class="step-label">DNS Lookup</div>
+                    <div class="step-detail">
+                        <h4>DNS Resolution</h4>
+                        <p>Tra cứu qua: Browser Cache → OS Cache → Router → ISP DNS → Root Server → TLD → Authoritative DNS. Kết quả: IP Address.</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step" data-step="2">
+                    <div class="step-icon">🤝</div>
+                    <div class="step-label">TCP Handshake</div>
+                    <div class="step-detail">
+                        <h4>TCP 3-Way Handshake</h4>
+                        <p><code>SYN → SYN-ACK → ACK</code> (~1 RTT). Thiết lập kết nối tin cậy giữa client và server.</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step" data-step="3">
+                    <div class="step-icon">🔐</div>
+                    <div class="step-label">TLS</div>
+                    <div class="step-detail">
+                        <h4>TLS Handshake</h4>
+                        <p>TLS 1.3 chỉ cần 1 RTT. Trao đổi keys, xác thực certificate, mã hóa kết nối.</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step" data-step="4">
+                    <div class="step-icon">📡</div>
+                    <div class="step-label">HTTP Request</div>
+                    <div class="step-detail">
+                        <h4>HTTP GET Request</h4>
+                        <p>Gửi request với headers: User-Agent, Accept, Cookie, etc. Server xử lý và chuẩn bị response.</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step" data-step="5">
+                    <div class="step-icon">📦</div>
+                    <div class="step-label">Response</div>
+                    <div class="step-detail">
+                        <h4>HTTP Response</h4>
+                        <p>Server trả về status code (200 OK), headers, và HTML body. Browser kiểm tra Content-Type.</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step" data-step="6">
+                    <div class="step-icon">🔄</div>
+                    <div class="step-label">Commit</div>
+                    <div class="step-detail">
+                        <h4>Commit Navigation</h4>
+                        <p>Browser Process chuyển data sang Renderer Process. IPC (Inter-Process Communication) giữa 2 processes.</p>
+                    </div>
+                </div>
+                <div class="timeline-connector"></div>
+                <div class="timeline-step" data-step="7">
+                    <div class="step-icon">🖥️</div>
+                    <div class="step-label">Render</div>
+                    <div class="step-detail">
+                        <h4>Start Rendering</h4>
+                        <p>Renderer Process bắt đầu parse HTML, tải resources, và vẽ trang. Chi tiết xem phần Rendering Pipeline ↓</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-flow-detail-panel" id="nav-flow-detail">
+                <div class="detail-placeholder">👆 Click vào step hoặc nhấn "Start Journey" để xem chi tiết</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RENDERING PIPELINE ===== -->
+    <section id="rendering-pipeline">
+        <div class="section-header">
+            <div class="section-badge">Section 02</div>
+            <h2>🎨 Rendering Pipeline</h2>
+            <p>Trái tim của browser — từ HTML/CSS đến pixels trên màn hình</p>
+        </div>
+        <div class="pipeline-container">
+            <div class="pipeline-controls">
+                <button id="pipeline-start" class="btn btn-primary">▶ Animate Pipeline</button>
+                <button id="pipeline-reset" class="btn btn-ghost">↺ Reset</button>
+            </div>
+            <div class="pipeline-flow" id="pipeline-flow">
+                <div class="pipeline-input-group">
+                    <div class="pipeline-node input-node" data-node="html" id="pipe-html">
+                        <div class="node-icon">📄</div>
+                        <div class="node-label">HTML</div>
+                    </div>
+                    <div class="pipeline-node input-node" data-node="css" id="pipe-css">
+                        <div class="node-icon">🎨</div>
+                        <div class="node-label">CSS</div>
+                    </div>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-parse-group">
+                    <div class="pipeline-node" data-node="dom" id="pipe-dom">
+                        <div class="node-icon">🏗️</div>
+                        <div class="node-label">DOM Tree</div>
+                    </div>
+                    <div class="pipeline-node" data-node="cssom" id="pipe-cssom">
+                        <div class="node-icon">🎭</div>
+                        <div class="node-label">CSSOM</div>
+                    </div>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-node" data-node="render-tree" id="pipe-render-tree">
+                    <div class="node-icon">🌳</div>
+                    <div class="node-label">Render Tree</div>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-node" data-node="layout" id="pipe-layout">
+                    <div class="node-icon">📏</div>
+                    <div class="node-label">Layout</div>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-node" data-node="paint" id="pipe-paint">
+                    <div class="node-icon">🖌️</div>
+                    <div class="node-label">Paint</div>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-node" data-node="composite" id="pipe-composite">
+                    <div class="node-icon">📑</div>
+                    <div class="node-label">Composite</div>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-node result-node" data-node="display" id="pipe-display">
+                    <div class="node-icon">🖥️</div>
+                    <div class="node-label">Display</div>
+                </div>
+            </div>
+            <div class="pipeline-detail-panel" id="pipeline-detail">
+                <div class="detail-placeholder">👆 Click vào node hoặc nhấn "Animate Pipeline" để xem chi tiết</div>
+            </div>
+            <!-- CSS Cost Table -->
+            <div class="cost-table-container">
+                <h3>💰 Chi phí của mỗi thay đổi CSS</h3>
+                <table class="cost-table">
+                    <thead>
+                        <tr>
+                            <th>Thay đổi</th>
+                            <th>Layout</th>
+                            <th>Paint</th>
+                            <th>Composite</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>width, height, margin, padding</code></td>
+                            <td class="cost-yes">✅</td>
+                            <td class="cost-yes">✅</td>
+                            <td class="cost-yes">✅</td>
+                        </tr>
+                        <tr>
+                            <td><code>color, background, box-shadow</code></td>
+                            <td class="cost-no">❌</td>
+                            <td class="cost-yes">✅</td>
+                            <td class="cost-yes">✅</td>
+                        </tr>
+                        <tr class="cost-optimal">
+                            <td><code>transform, opacity</code></td>
+                            <td class="cost-no">❌</td>
+                            <td class="cost-no">❌</td>
+                            <td class="cost-yes">✅</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="cost-hint">↑ Càng ít bước → càng nhanh → UX càng mượt</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EVENT LOOP SIMULATOR ===== -->
+    <section id="event-loop">
+        <div class="section-header">
+            <div class="section-badge">Section 03 — ⭐ Star Feature</div>
+            <h2>⚡ Event Loop Simulator</h2>
+            <p>Xem JavaScript thực thi code như thế nào — step by step</p>
+        </div>
+        <div class="el-container">
+            <div class="el-code-panel">
+                <div class="el-code-header">
+                    <span>Chọn ví dụ:</span>
+                    <div class="el-examples">
+                        <button class="btn btn-sm el-example-btn active" data-example="0">Basic</button>
+                        <button class="btn btn-sm el-example-btn" data-example="1">Promises</button>
+                        <button class="btn btn-sm el-example-btn" data-example="2">Mixed</button>
+                    </div>
+                </div>
+                <pre class="el-code" id="el-code-display"></pre>
+                <div class="el-controls">
+                    <button id="el-run" class="btn btn-primary">▶ Run</button>
+                    <button id="el-step" class="btn btn-secondary">⏭ Step</button>
+                    <button id="el-reset" class="btn btn-ghost">↺ Reset</button>
+                    <label class="el-speed-label">
+                        Speed:
+                        <input type="range" id="el-speed" min="200" max="2000" value="800" step="100">
+                    </label>
+                </div>
+            </div>
+            <div class="el-visual-panel">
+                <div class="el-zone" id="el-callstack">
+                    <div class="el-zone-header">📚 Call Stack</div>
+                    <div class="el-zone-items"></div>
+                </div>
+                <div class="el-zone" id="el-webapis">
+                    <div class="el-zone-header">🌐 Web APIs</div>
+                    <div class="el-zone-items"></div>
+                </div>
+                <div class="el-queues">
+                    <div class="el-zone microtask-zone" id="el-microtask">
+                        <div class="el-zone-header">⚡ Microtask Queue</div>
+                        <div class="el-zone-items"></div>
+                    </div>
+                    <div class="el-zone macrotask-zone" id="el-macrotask">
+                        <div class="el-zone-header">📬 Task Queue</div>
+                        <div class="el-zone-items"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="el-output-panel">
+                <div class="el-zone" id="el-output">
+                    <div class="el-zone-header">🖥️ Console Output</div>
+                    <div class="el-zone-items el-console"></div>
+                </div>
+                <div class="el-explanation" id="el-explanation">
+                    <p>👈 Chọn ví dụ và nhấn <strong>Run</strong> hoặc <strong>Step</strong> để bắt đầu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PERFORMANCE DEMO ===== -->
+    <section id="performance-demo">
+        <div class="section-header">
+            <div class="section-badge">Section 04</div>
+            <h2>🚀 Performance Demo</h2>
+            <p><code>transform</code> vs <code>left</code> — Thấy sự khác biệt bằng mắt</p>
+        </div>
+        <div class="perf-container">
+            <div class="perf-controls">
+                <button id="perf-start" class="btn btn-primary">▶ Start Animation</button>
+                <button id="perf-stop" class="btn btn-ghost">⏹ Stop</button>
+                <label class="perf-complexity-label">
+                    DOM Complexity:
+                    <input type="range" id="perf-complexity" min="1" max="100" value="20" step="1">
+                    <span id="perf-complexity-val">20</span> boxes
+                </label>
+            </div>
+            <div class="perf-demo-area">
+                <div class="perf-lane" id="perf-lane-left">
+                    <div class="perf-lane-header">
+                        <h3>❌ <code>left</code> property</h3>
+                        <p>Triggers: Layout → Paint → Composite</p>
+                        <div class="perf-fps" id="fps-left">-- FPS</div>
+                    </div>
+                    <div class="perf-track" id="perf-track-left">
+                        <div class="perf-box left-box" id="perf-box-left"></div>
+                    </div>
+                </div>
+                <div class="perf-lane" id="perf-lane-transform">
+                    <div class="perf-lane-header">
+                        <h3>✅ <code>transform</code> property</h3>
+                        <p>Triggers: Composite only</p>
+                        <div class="perf-fps" id="fps-transform">-- FPS</div>
+                    </div>
+                    <div class="perf-track" id="perf-track-transform">
+                        <div class="perf-box transform-box" id="perf-box-transform"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="perf-explanation">
+                <div class="perf-card bad">
+                    <h4>❌ <code>left</code> — Chậm</h4>
+                    <ul>
+                        <li>Trigger <strong>Layout</strong> (reflow) mỗi frame</li>
+                        <li>Trigger <strong>Paint</strong> lại element</li>
+                        <li>CPU phải tính toán lại toàn bộ layout</li>
+                        <li>FPS giảm khi DOM phức tạp</li>
+                    </ul>
+                </div>
+                <div class="perf-card good">
+                    <h4>✅ <code>transform</code> — Mượt</h4>
+                    <ul>
+                        <li><strong>Skip</strong> Layout và Paint</li>
+                        <li>Chỉ cần <strong>Composite</strong> trên GPU</li>
+                        <li>Element nằm trên layer riêng</li>
+                        <li>Luôn đạt 60 FPS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer">
+        <p>Built with ❤️ for learning — <a href="https://web.dev" target="_blank">web.dev</a> · <a href="https://developer.mozilla.org" target="_blank">MDN</a> · <a href="https://www.chromium.org" target="_blank">Chromium</a></p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
