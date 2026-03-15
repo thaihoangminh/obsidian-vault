@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b7ccc0a0fbb6a78c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3. Learning/AI/Document-Driven Development with AI.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Document-Driven Development with AI"
-            }
-          },
-          {
             "id": "716198bae502fae9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03-Knowledge/How Browsers Work/Browser Security.md",
+                "file": "00-Inbox/Untitled.md",
                 "mode": "preview",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +28,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Browser Security"
+              "title": "Untitled"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -196,15 +171,14 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "obsidian-importer:Open Importer": false,
-      "obsidian-kanban:Create new board": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:Open command palette": false
     }
   },
   "active": "716198bae502fae9",
   "lastOpenFiles": [
     "03-Knowledge/How Browsers Work/How Browsers Work MOC.md",
+    "00-Inbox/Untitled.md",
+    "03-Knowledge/How Browsers Work/Browser Security.md",
     "03-Knowledge/How Browsers Work/Browser Storage.md",
     "03-Knowledge/How Browsers Work/Kiến trúc Browser.md",
     "99-Archive",
@@ -237,8 +211,6 @@
     "3. Learning/AI/Git commit messages.md",
     "3. Learning/AI/Log timesheet 2.md",
     "1. Project/Image Processing/0.1 Project Requirements Document (PRD).md",
-    "3. Learning/AI/Code Preview Template.md",
-    "Vibe-coding doc.md",
     "1. Project/Image Processing",
     "Node.js Mindmap.canvas",
     "Attachments/IMG_3995.gif",
